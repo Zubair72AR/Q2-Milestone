@@ -18,9 +18,9 @@ export function ModeToggling() {
   return (
     <button onClick={themeSelection}>
       {theme === "light" ? (
-        <Moon className="text-2xl text-zinc-800 dark:text-white" />
+        <Moon className="text-2xl text-zinc-900 dark:text-white" />
       ) : (
-        <Sun className="text-2xl text-zinc-800 dark:text-white" />
+        <Sun className="text-2xl text-zinc-900 dark:text-white" />
       )}
     </button>
   );

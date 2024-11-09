@@ -37,7 +37,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex justify-between items-center px-6 lg:px-12 2xl:px-24 py-6 bg-white dark:bg-zinc-800">
+    <nav className="flex justify-between items-center px-6 lg:px-12 2xl:px-24 py-6 bg-white dark:bg-zinc-900">
       <motion.div
         initial={{ opacity: 0, x: 15 }}
         animate={{ opacity: 1, x: 0 }}
@@ -46,7 +46,7 @@ export default function Navbar() {
       >
         <Link
           href="/"
-          className="font-bold text-4xl text-zinc-800 dark:text-white"
+          className="font-bold text-4xl text-zinc-900 dark:text-white"
         >
           BinJAN{" "}
         </Link>
@@ -55,7 +55,7 @@ export default function Navbar() {
       <ul
         className={`${
           menuOpen ? "hidden md:flex" : "flex"
-        } flex-col md:flex-row justify-center items-start md:items-center gap-6 absolute md:relative top-20 md:top-0 left-0 py-12 md:py-0 px-12 md:px-0 bg-white dark:bg-zinc-800 md:bg-transparent w-full md:w-auto`}
+        } flex-col md:flex-row justify-center items-start md:items-center gap-6 absolute md:relative top-20 md:top-0 left-0 py-12 md:py-0 px-12 md:px-0 bg-white dark:bg-zinc-900 md:bg-transparent w-full md:w-auto`}
       >
         {navLinks.map((link, index) => (
           <motion.li
@@ -65,8 +65,8 @@ export default function Navbar() {
             transition={{ delay: index * 0.1, duration: 0.5 }}
             className={
               isActive(link.href)
-                ? "active text-zinc-800 dark:text-white text-sm font-bold"
-                : "not_Active text-zinc-800 dark:text-white text-sm font-bold"
+                ? "active text-zinc-900 dark:text-white text-sm font-bold"
+                : "not_Active text-zinc-900 dark:text-white text-sm font-bold"
             }
           >
             <Link href={link.href}>{link.label}</Link>
@@ -75,13 +75,13 @@ export default function Navbar() {
       </ul>
       <div className="flex justify-center items-center gap-4 md:gap-10">
         <Link href="contact">
-          <button className="px-4 py-[6px] rounded-sm bg-gradient-to-tr from-red-600 via-red-500 to-red-600 text-white text-sm font-medium">
+          <button className="px-4 py-[6px] rounded-sm bg-gradient-to-tr from-red-500 to-red-400 text-white text-sm font-medium shadow-md">
             Hire me
           </button>
         </Link>
         <ModeToggling />
         <button
-          className="text-2xl text-zinc-800 dark:text-white block md:hidden"
+          className="text-2xl text-zinc-900 dark:text-white block md:hidden"
           onClick={() => {
             setMenuOpen(!menuOpen);
           }}
