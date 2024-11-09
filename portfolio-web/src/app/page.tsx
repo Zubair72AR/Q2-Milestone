@@ -1,10 +1,10 @@
-import { div } from "framer-motion/client";
-import Image from "next/image";
+import { ModeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
     <div>
-      <h1>hallo</h1>
+      <ModeToggle />
+      <h1 className="text-red-600 dark:text-green-500">hallo</h1>
     </div>
   );
 }
