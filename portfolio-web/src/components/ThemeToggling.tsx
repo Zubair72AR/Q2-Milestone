@@ -16,21 +16,12 @@ export function ModeToggling() {
   }
 
   return (
-    <div>
-      <button
-        onClick={themeSelection}
-        className={
-          theme === "dark"
-            ? "p-2 bg-black shadow-md rounded-md"
-            : "p-2 bg-white shadow-md rounded-md"
-        }
-      >
-        {theme === "dark" ? (
-          <Moon className="text-white" />
-        ) : (
-          <Sun className="text-black" />
-        )}
-      </button>
-    </div>
+    <button onClick={themeSelection}>
+      {theme === "light" ? (
+        <Moon className="text-2xl text-zinc-800 dark:text-white" />
+      ) : (
+        <Sun className="text-2xl text-zinc-800 dark:text-white" />
+      )}
+    </button>
   );
 }

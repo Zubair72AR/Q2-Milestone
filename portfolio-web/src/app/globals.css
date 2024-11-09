@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/*
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -41,7 +41,7 @@ body {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 224 71.4% 4.1%;
+    --background: #27272a;
     --foreground: 210 20% 98%;
     --card: 224 71.4% 4.1%;
     --card-foreground: 210 20% 98%;
@@ -76,4 +76,39 @@ body {
     @apply bg-background text-foreground;
   }
 }
-*/
+
+/*/////////////////////////////////////////*/
+/* Nav Links Setting */
+/*/////////////////////////////////////////*/
+nav .active,
+.not_Active {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+nav .active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  border-bottom: 2px solid #ef4444;
+  transform: translateX(-50%);
+}
+
+nav .not_Active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 0%;
+  border-bottom: 2px solid #ef4444;
+  transform: translateX(-50%);
+  transition: 0.4s ease-in;
+}
+
+nav .not_Active:hover:after {
+  left: 25%;
+  width: 50%;
+}
