@@ -6,6 +6,8 @@ import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import { motion } from "framer-motion";
+import Button from "@/components/Button";
+import { MdOutlineEmail } from "react-icons/md";
 
 export default function Navbar() {
   let pathName = usePathname();
@@ -39,9 +41,9 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center px-6 lg:px-12 2xl:px-24 py-6 bg-white dark:bg-zinc-900">
       <motion.div
-        initial={{ opacity: 0, x: 15 }}
+        initial={{ opacity: 0, x: -15 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0, duration: 0.5 }}
+        transition={{ delay: 0, duration: 0.6 }}
         className="flex justify-center items-baseline px-2"
       >
         <Link
@@ -62,7 +64,7 @@ export default function Navbar() {
             key={index}
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.5 }}
+            transition={{ delay: index * 0.1, duration: 0.6 }}
             className={
               isActive(link.href)
                 ? "active text-zinc-900 dark:text-white text-sm font-bold"
@@ -73,11 +75,13 @@ export default function Navbar() {
           </motion.li>
         ))}
       </ul>
-      <div className="flex justify-center items-center gap-4 md:gap-10">
+      <div className="flex justify-center items-center gap-3 sm:gap-6 md:gap-8">
         <Link href="contact">
-          <button className="px-4 py-[6px] rounded-sm bg-gradient-to-tr from-red-500 to-red-400 text-white text-sm font-medium shadow-md">
-            Hire me
-          </button>
+          <Button
+            btnText="Hire Me"
+            btnClass="px-4 py-[7px] hidden xs:flex"
+            btnIcon={<MdOutlineEmail />}
+          />
         </Link>
         <ModeToggling />
         <button

@@ -112,7 +112,3 @@ nav .not_Active:hover:after {
   left: 25%;
   width: 50%;
 }
-
-.text-stroke {
-  -webkit-text-stroke: 1px #3f3f46;
-}
