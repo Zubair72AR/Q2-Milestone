@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true, // Enable React strict mode
-  swcMinify: true, // Enable SWC-based minification (faster than Terser)
+  reactStrictMode: true,
+  swcMinify: true,
   eslint: {
-    ignoreDuringBuilds: true, // Disable ESLint during production builds
+    ignoreDuringBuilds: true,
   },
 };
 
