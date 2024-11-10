@@ -132,7 +132,7 @@ export default function Contact() {
           <motion.textarea
             placeholder="Message"
             required
-            rows="4"
+            rows="6"
             className="w-full outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 dark:focus:border-red-500 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
             initial={{ opacity: 0, x: -25 }}
             animate={{ opacity: 1, x: 0 }}
