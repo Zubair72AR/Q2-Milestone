@@ -102,12 +102,11 @@ export default function Contact() {
           </div>
         </div>
         <form className="md:w-2/3 w-full">
-        
           <motion.input
             type="text"
             placeholder="Your Name"
             required
-            className="w-1/2 outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
+            className="w-full outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 dark:focus:border-red-500 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
             initial={{ opacity: 0, x: -25 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
@@ -116,7 +115,7 @@ export default function Contact() {
             type="email"
             placeholder="Email Address"
             required
-            className="w-full outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
+            className="w-full outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 dark:focus:border-red-500 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
             initial={{ opacity: 0, x: -25 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
@@ -125,7 +124,7 @@ export default function Contact() {
             type="tel"
             placeholder="Phone Number"
             required
-            className="w-full outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
+            className="w-full outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 dark:focus:border-red-500 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
             initial={{ opacity: 0, x: -25 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
@@ -133,8 +132,8 @@ export default function Contact() {
           <motion.textarea
             placeholder="Message"
             required
-           
-            className="w-full outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
+            rows="4"
+            className="w-full outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 dark:focus:border-red-500 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
             initial={{ opacity: 0, x: -25 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
