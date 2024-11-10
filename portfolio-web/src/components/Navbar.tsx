@@ -39,7 +39,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex justify-between items-center px-6 lg:px-12 2xl:px-24 py-6 bg-white dark:bg-zinc-900">
+    <nav className="sticky w-full top-0 z-50 flex justify-between items-center px-6 lg:px-12 2xl:px-24 py-6 bg-white dark:bg-zinc-900">
       <motion.div
         initial={{ opacity: 0, x: -15 }}
         animate={{ opacity: 1, x: 0 }}
