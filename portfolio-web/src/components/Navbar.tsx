@@ -10,12 +10,12 @@ import Button from "@/components/Button";
 import { MdOutlineEmail } from "react-icons/md";
 
 export default function Navbar() {
-  let pathName = usePathname();
-  let isActive = (path: string) => path == pathName;
+  const pathName = usePathname();
+  const isActive = (path: string) => path == pathName;
 
   const [menuOpen, setMenuOpen] = useState(true);
 
-  let navLinks = [
+  const navLinks = [
     {
       label: "Home",
       href: "/",
