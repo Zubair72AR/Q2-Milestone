@@ -55,11 +55,11 @@ export default function Home() {
           className="flex justify-center items-center"
         >
           <Image
-            src={portfolioImage}
+            src="/hero_02.png"
             alt="Portfolio Image"
             width={500}
             height={300}
-            className="w-[550px] relative -bottom-12 -z-10"
+            className="w-[550px] relative -bottom-12 -z-20"
           />
         </motion.div>
       </div>
@@ -144,7 +144,7 @@ export default function Home() {
             It is a long established fact that a reader will be distracted by
             the readable content of a page.
           </motion.p>
-          <div className="w-96 h-16 bg-red-500 absolute translate-y-1/2 right-2 lg:right-8 2xl:right-16 -z-10"></div>
+          <div className="w-96 h-16 bg-red-500 absolute translate-y-1/2 right-6 2xl:right-10 -z-10"></div>
         </motion.div>
       </div>
     </div>
