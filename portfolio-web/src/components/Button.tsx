@@ -30,7 +30,7 @@ export default function Button({
       }}
       className={`${
         btnClass ? btnClass : "px-4 py-3"
-      } rounded-sm bg-gradient-to-tr from-red-500 to-red-600 text-white text-sm shadow-md flex justify-center items-center hover:bg-gradient-to-br`}
+      } rounded-sm bg-gradient-to-r from-red-500 via-red-600 to-orange-600 text-white text-sm shadow-md flex justify-center items-center hover:bg-gradient-to-br`}
       onClick={onClicking}
     >
       {btnIcon && <span className="mr-1 text-lg">{btnIcon}</span>}

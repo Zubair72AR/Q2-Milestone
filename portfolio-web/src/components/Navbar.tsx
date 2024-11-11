@@ -44,13 +44,13 @@ export default function Navbar() {
         initial={{ opacity: 0, x: -15 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0, duration: 0.6 }}
-        className="flex justify-center items-baseline px-2"
+        className="flex justify-center items-baseline"
       >
         <Link
           href="/"
           className="font-bold text-4xl text-zinc-900 dark:text-white"
         >
-          BinJAN{" "}
+          BinJAN
         </Link>
         <span className="h-2 w-2 rounded-full bg-red-500"></span>
       </motion.div>
