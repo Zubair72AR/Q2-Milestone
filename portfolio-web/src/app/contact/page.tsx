@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <div className="px-6 lg:px-12 2xl:px-24 relative py-12">
       <Headings headText="Contact." headClass="mb-8" />
-      <div className="flex justify-between flex-col md:flex-row">
+      <div className="flex justify-between gap-0 md:gap-16 flex-col md:flex-row">
         <div className="grid gap-5 md:gap-0 mb-12">
           <div className="grid grid-col-2 w-fit h-fit">
             <motion.span
@@ -100,12 +100,9 @@ export default function Contact() {
               Karachi, Sindh - Pakistan
             </motion.p>
           </div>
-          
         </div>
 
         <form>
-        <div className="md:w-2/3 w-full">
-
           <motion.input
             type="text"
             placeholder="Your Name"
@@ -141,7 +138,7 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
           ></motion.textarea>
-        </div>
+
           <Button btnText="Send Message" btnClass="" btnIcon={<FiSend />} />
         </form>
       </div>
