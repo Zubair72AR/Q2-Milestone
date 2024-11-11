@@ -30,12 +30,12 @@ export default function Home() {
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="col-span-1 text-zinc-800 dark:text-white font-bold text-3xl mt-12"
+            className="col-span-1 text-zinc-800 dark:text-white font-bold text-2xl mt-12"
           >
             Hello! I'm
           </motion.p>
-          <Headings headText="Zubair" headClass="-mb-6" />
-          <Headings headText="Ahmed." headClass="mb-8" />
+          <Headings headText="Zubair" headClass="-mb-6 z-10" />
+          <Headings headText="Ahmed." headClass="mb-8 z-10" />
           <a
             href="/my_resume.pdf"
             download="My_Resume.pdf"
@@ -63,19 +63,19 @@ export default function Home() {
           />
         </motion.div>
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-8">
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0, duration: 0.5 }}
-          className="px-10 py-16 w-96 shadow-lg border-2 border-red-400 bg-gradient-to-br from-red-500 via-red-600 to-orange-600"
+          className="px-10 py-16 shadow-lg border-2 border-red-400 bg-gradient-to-br from-red-500 via-red-600 to-orange-600"
         >
           <BsBarChartLine className="text-white h-10 w-12 mb-12" />
           <motion.p
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="font-bold text-3xl text-white mb-1"
+            className="font-bold text-2xl text-white mb-1"
           >
             Future Vision.
           </motion.p>
@@ -95,16 +95,16 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0, duration: 0.5 }}
-          className="group px-10 py-16 w-96 shadow-lg border-2 border-zinc-100 hover:border-red-400 bg-gradient-to-br from-white to-zinc-50 hover:bg-gradient-to-br hover:from-red-500 hover:via-red-600 hover:to-orange-600 "
+          className="group px-10 py-16 shadow-lg border-2 border-zinc-100 hover:border-red-400 bg-gradient-to-br from-white to-zinc-50 hover:bg-gradient-to-br hover:from-red-500 hover:via-red-600 hover:to-orange-600 "
         >
           <MdOutlineRocketLaunch className="text-red-500 group-hover:text-white h-10 w-12 mb-12" />
           <motion.p
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="font-bold text-3xl text-zinc-900  group-hover:text-white mb-1"
+            className="font-bold text-2xl text-zinc-900  group-hover:text-white mb-1"
           >
-            Future Vision.
+            Product Design.
           </motion.p>
           <hr className="w-12 border-red-500 border-[1px] group-hover:border-white mb-6" />
 
@@ -114,24 +114,24 @@ export default function Home() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-sm text-zinc-900 group-hover:text-white "
           >
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page.
+            There are many variations of passages of available, but the majority
+            alteration in some form.
           </motion.p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0, duration: 0.5 }}
-          className="group px-10 py-16 w-96 shadow-lg border-2 border-zinc-100 hover:border-red-400 bg-gradient-to-br from-white to-zinc-50 hover:bg-gradient-to-br hover:from-red-500 hover:via-red-600 hover:to-orange-600 "
+          className="group px-10 py-16 shadow-lg border-2 border-zinc-100 hover:border-red-400 bg-gradient-to-br from-white to-zinc-50 hover:bg-gradient-to-br hover:from-red-500 hover:via-red-600 hover:to-orange-600 "
         >
           <AiOutlinePieChart className="text-red-500 group-hover:text-white h-10 w-12 mb-12" />
           <motion.p
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="font-bold text-3xl text-zinc-900  group-hover:text-white mb-1"
+            className="font-bold text-2xl text-zinc-900  group-hover:text-white mb-1"
           >
-            Future Vision.
+            Inovative Solutions.
           </motion.p>
           <hr className="w-12 border-red-500 border-[1px] group-hover:border-white mb-6" />
 
@@ -141,10 +141,10 @@ export default function Home() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-sm text-zinc-900 group-hover:text-white "
           >
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page.
+            The generated Lorem Ipsum is therefore always free from repetition,
+            injected humour.
           </motion.p>
-          <div className="w-96 h-16 bg-red-500 absolute translate-y-1/2 right-6 2xl:right-10 -z-10"></div>
+          <div className="w-96 h-16 bg-red-500 absolute translate-y-1/2 right-1 md:right-6 2xl:right-10 -z-10"></div>
         </motion.div>
       </div>
     </div>
