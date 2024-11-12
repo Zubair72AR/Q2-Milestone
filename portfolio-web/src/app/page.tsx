@@ -13,19 +13,21 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="px-6 lg:px-12 2xl:px-24 py-12">
-      <div className="flex justify-end h-[500px] md:flex-row-reverse flex-col">
-        <div className="px-2 relative">
-          <motion.span
-            initial={{ scaleX: 0, x: "-50%" }}
-            animate={{ scaleX: 1 }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut",
-            }}
-            className="shadow-lg left-0 top-0 w-32 h-1 absolute bg-gradient-to-r from-red-500 via-red-600 to-orange-600"
-          ></motion.span>
+      <div className="flex justify-end md:flex-row-reverse flex-col gap-6 h-[500px]">
+        <div className="px-2">
+          <div>
+            <motion.span
+              initial={{ scaleX: 0, x: "-50%" }}
+              animate={{ scaleX: 1 }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+              className="shadow-lg left-0 top-0 w-32 h-1 absolute bg-gradient-to-r from-red-500 via-red-600 to-orange-600"
+            ></motion.span>
+          </div>
 
           <motion.p
             initial={{ opacity: 0, x: -15 }}
@@ -35,13 +37,9 @@ export default function Home() {
           >
             Hello! I'm
           </motion.p>
-          <Headings headText="Zubair" headClass="-mb-6 z-10" />
-          <Headings headText="Ahmed." headClass="mb-8 z-10" />
-          <Link
-            href="/my_resume.pdf"
-            className="btn btn-primary"
-            target="_blank"
-          >
+          <Headings headText="Zubair" headClass="-mb-4 z-10" />
+          <Headings headText="Ahmed." headClass="mb-6 z-10" />
+          <Link href="/my_resume.pdf" target="_blank">
             <Button
               btnText="Resume"
               btnClass="flex-row-reverse px-4 py-3"
@@ -53,7 +51,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.8, rotate: 15 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex justify-center items-center"
+          className="flex justify-center items-center ml-4"
         >
           <Image
             src="/hero_02.png"
@@ -64,7 +62,7 @@ export default function Home() {
           />
         </motion.div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-8 mt-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
