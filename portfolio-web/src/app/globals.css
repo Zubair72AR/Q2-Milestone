@@ -112,3 +112,27 @@ nav .not_Active:hover:after {
   left: 25%;
   width: 50%;
 }
+
+.quotesSetting::first-letter {
+  padding-left: 15px;
+}
+.quotesSetting {
+  quotes: "“" "”";
+  position: relative;
+  text-indent: 3px;
+  &::before {
+    content: open-quote;
+    font-size: 2rem;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    font-family: Georgia, serif;
+  }
+  &::after {
+    content: close-quote;
+    font-size: 2rem;
+    bottom: -14px;
+    position: absolute;
+    font-family: Georgia, serif;
+  }
+}

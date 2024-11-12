@@ -39,7 +39,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky w-full top-0 z-50 flex justify-between items-center px-6 lg:px-12 2xl:px-24 py-6 bg-white dark:bg-zinc-900">
+    <nav className="sticky w-full top-0 z-50 flex justify-between items-center px-6 lg:px-12 2xl:px-24 py-3 md:py-6 bg-white dark:bg-zinc-900">
       <motion.div
         initial={{ opacity: 0, x: -15 }}
         animate={{ opacity: 1, x: 0 }}
@@ -57,7 +57,7 @@ export default function Navbar() {
       <ul
         className={`${
           menuOpen ? "hidden md:flex" : "flex"
-        } flex-col md:flex-row justify-center items-start md:items-center gap-6 absolute md:relative top-20 md:top-0 left-0 py-12 md:py-0 px-12 md:px-0 bg-white dark:bg-zinc-900 md:bg-transparent w-full md:w-auto`}
+        } flex-col md:flex-row justify-center items-start md:items-center gap-6 absolute md:relative top-[60px] md:top-0 left-0 py-12 md:py-0 px-12 md:px-0 bg-white dark:bg-zinc-900 md:bg-transparent w-full md:w-auto`}
       >
         {navLinks.map((link, index) => (
           <motion.li

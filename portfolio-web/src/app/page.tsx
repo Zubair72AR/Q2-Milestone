@@ -4,7 +4,7 @@ import Headings from "@/components/Headings";
 import { motion } from "framer-motion";
 import portfolioImage from "../../public/hero_02.png";
 import Button from "@/components/Button";
-import { LuExternalLink } from "react-icons/lu";
+import { TbExternalLink } from "react-icons/tb";
 import { BsBarChartLine } from "react-icons/bs";
 import { MdOutlineRocketLaunch } from "react-icons/md";
 import { AiOutlinePieChart } from "react-icons/ai";
@@ -12,10 +12,10 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="px-6 lg:px-12 2xl:px-24 py-12">
-      <div className="block md:flex justify-end flex-row-reverse gap-6 h-fit md:h-[500px]">
+    <div className="px-6 lg:px-12 2xl:px-24 py-8 md:py-12">
+      <div className="block md:flex justify-between lg:justify-end flex-row-reverse gap-0 lg:gap-4 h-auto md:h-[400px] lg:h-[450px]">
         <div className="px-2">
-          <div>
+          <div className="relative p-1 overflow-hidden">
             <motion.span
               initial={{ scaleX: 0, x: "-50%" }}
               animate={{ scaleX: 1 }}
@@ -37,20 +37,20 @@ export default function Home() {
           >
             Hello! I'm
           </motion.p>
-          <Headings headText="Zubair" headClass="-mb-2 z-10" />
+          <Headings headText="Zubair" headClass="z-10" />
           <Headings headText="Ahmed." headClass="mb-6 z-10" />
           <Link href="/my_resume.pdf" target="_blank">
             <Button
               btnText="Resume"
-              btnClass="flex-row-reverse px-4 py-3"
-              btnIcon={<LuExternalLink className="ml-1" />}
+              btnClass="px-[14px] py-[10px] md:px-4 md:py-[11px]"
+              btnIcon={<TbExternalLink />}
             />
           </Link>
         </div>
         <motion.div
           initial={{ opacity: 0, scale: 0.8, rotate: 15 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           className="flex justify-center items-center ml-4"
         >
           <Image
@@ -58,7 +58,7 @@ export default function Home() {
             alt="Portfolio Image"
             width={500}
             height={300}
-            className="w-[90%] sm:w-[480px] relative bottom-4 md:-bottom-12 -z-20"
+            className="w-[90%] sm:w-[480px] md:w-[400px] relative bottom-4 md:-bottom-10 -z-20"
           />
         </motion.div>
       </div>
@@ -84,7 +84,7 @@ export default function Home() {
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-sm text-white"
+            className="quotesSetting text-sm text-white"
           >
             It is a long established fact that a reader will be distracted by
             the readable content of a page.
@@ -111,7 +111,7 @@ export default function Home() {
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-sm text-zinc-900 group-hover:text-white "
+            className="quotesSetting text-sm text-zinc-900 group-hover:text-white "
           >
             There are many variations of passages of available, but the majority
             alteration in some form.
@@ -138,12 +138,12 @@ export default function Home() {
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-sm text-zinc-900 group-hover:text-white"
+            className="quotesSetting text-sm text-zinc-900 group-hover:text-white"
           >
             The generated Lorem Ipsum is therefore always free from repetition,
             injected humour.
           </motion.p>
-          <div className="w-80 h-16 bg-red-500 absolute translate-y-1/2 right-1 md:right-6 2xl:right-10 -z-10"></div>
+          <div className="w-1/4 h-16 bg-red-500 absolute translate-y-1/2 right-1 md:right-4 2xl:right-10 -z-10"></div>
         </motion.div>
       </div>
     </div>

@@ -29,11 +29,11 @@ export default function Button({
         transition: { duration: 0.1 },
       }}
       className={`${
-        btnClass ? btnClass : "px-4 py-3"
-      } rounded-sm bg-gradient-to-r from-red-500 via-red-600 to-orange-600 text-white text-sm shadow-md flex justify-center items-center hover:bg-gradient-to-br`}
+        btnClass ? btnClass : "px-[14px] py-[10px] md:px-4 md:py-3"
+      } rounded-sm bg-gradient-to-r from-red-500 via-red-600 to-orange-600 text-white text-xs md:text-sm shadow-md flex justify-center items-center hover:bg-gradient-to-br`}
       onClick={onClicking}
     >
-      {btnIcon && <span className="mr-1 text-lg">{btnIcon}</span>}
+      {btnIcon && <span className="mr-1 text-base md:text-lg">{btnIcon}</span>}
       {btnText}
     </motion.button>
   );

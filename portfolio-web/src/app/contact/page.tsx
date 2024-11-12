@@ -110,7 +110,7 @@ export default function Contact() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="col-start-2 text-zinc-600 dark:text-zinc-400 text-sm"
             >
-              Karachi, Sindh - Pakistan
+              Karachi - Pakistan
             </motion.p>
           </div>
         </div>
@@ -152,7 +152,11 @@ export default function Contact() {
             transition={{ delay: 0.3, duration: 1 }}
           ></motion.textarea>
 
-          <Button btnText="Send Message" btnClass="" btnIcon={<FiSend />} />
+          <Button
+            btnText="Send Message"
+            btnClass="px-[14px] py-[10px] md:px-4 md:py-3"
+            btnIcon={<FiSend />}
+          />
         </form>
       </div>
     </div>
