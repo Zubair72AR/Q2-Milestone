@@ -146,6 +146,7 @@ export default function Home() {
           <div className="w-1/4 h-16 bg-red-500 absolute translate-y-1/2 right-1 md:right-4 2xl:right-10 -z-10"></div>
         </motion.div>
       </div>
+      <div className="w-full bg-green-500 h-60 mt-20 mb-5"></div>
     </div>
   );
 }

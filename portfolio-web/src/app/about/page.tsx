@@ -70,15 +70,28 @@ export default function Contact() {
       </div>
       <Headings headText="Biography." headClass="" />
       <div className="flex justify-between items-center my-12">
-        <div className="p-[1px] rounded-full bg-gradient-to-r from-red-500 via-red-600 to-orange-600 mr-6 shadow-lg">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.3 },
+          }}
+          whileTap={{
+            scale: 0.95,
+            transition: { duration: 0.1 },
+          }}
+          className="p-[2px] rounded-full bg-gradient-to-r from-red-500 via-red-600 to-orange-600 mr-6 shadow-lg animate-in"
+        >
           <Image
-            src="/portfolio.jpg"
+            src="/image.jpg"
             alt="Portfolio Image"
             width={500}
             height={500}
             className="rounded-full"
           />
-        </div>
+        </motion.div>
         <div>
           <motion.p
             initial={{ opacity: 0, x: 25 }}
