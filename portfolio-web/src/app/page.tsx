@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="px-6 lg:px-12 2xl:px-24 py-12">
-      <div className="flex justify-end md:flex-row-reverse flex-col gap-6 h-[500px]">
+      <div className="block md:flex justify-end flex-row-reverse gap-6 h-fit md:h-[500px]">
         <div className="px-2">
           <div>
             <motion.span
@@ -37,7 +37,7 @@ export default function Home() {
           >
             Hello! I'm
           </motion.p>
-          <Headings headText="Zubair" headClass="-mb-4 z-10" />
+          <Headings headText="Zubair" headClass="-mb-2 z-10" />
           <Headings headText="Ahmed." headClass="mb-6 z-10" />
           <Link href="/my_resume.pdf" target="_blank">
             <Button
@@ -58,11 +58,11 @@ export default function Home() {
             alt="Portfolio Image"
             width={500}
             height={300}
-            className="w-[480px] relative -bottom-12 -z-20"
+            className="w-[90%] sm:w-[480px] relative bottom-4 md:-bottom-12 -z-20"
           />
         </motion.div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-start gap-8 mt-4">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-8 -mt-24 md:mt-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
