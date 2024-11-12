@@ -37,8 +37,8 @@ export default function Home() {
           >
             Hello! I'm
           </motion.p>
-          <Headings headText="Zubair" headClass="z-10" />
-          <Headings headText="Ahmed." headClass="mb-6 z-10" />
+          <Headings headText="Zubair" headClass="leading-none z-10" />
+          <Headings headText="Ahmed." headClass="leading-none mb-4 z-10" />
           <Link href="/my_resume.pdf" target="_blank">
             <Button
               btnText="Resume"

@@ -9,15 +9,20 @@ import { motion } from "framer-motion";
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 import Image from "next/image";
 const personalInfo = [
-  { label: "Name", value: "Zubair Ahmed", delay: 0.1, delayText: 0.2 },
-  { label: "Father Name", value: "Jan Muhammad", delay: 0.3, delayText: 0.4 },
-  { label: "Job", value: "Web Developer", delay: 0.5, delayText: 0.6 },
-  { label: "Nationality", value: "Pakistan", delay: 0.7, delayText: 0.8 },
-  { label: "Birthday", value: "25 December", delay: 0.9, delayText: 1.0 },
-  { label: "Phone", value: "+92 0342 3873626", delay: 1.1, delayText: 1.2 },
-  { label: "Email", value: "hzubair717@gmail.com", delay: 1.3, delayText: 1.4 },
+  { label: "Name :", value: "Zubair Ahmed", delay: 0.1, delayText: 0.2 },
+  { label: "Father Name :", value: "Jan Muhammad", delay: 0.3, delayText: 0.4 },
+  { label: "Job :", value: "Web Developer", delay: 0.5, delayText: 0.6 },
+  { label: "Nationality :", value: "Pakistan", delay: 0.7, delayText: 0.8 },
+  { label: "Birthday :", value: "25 December", delay: 0.9, delayText: 1.0 },
+  { label: "Phone :", value: "+92 0342 3873626", delay: 1.1, delayText: 1.2 },
   {
-    label: "Location",
+    label: "Email :",
+    value: "hzubair717@gmail.com",
+    delay: 1.3,
+    delayText: 1.4,
+  },
+  {
+    label: "Location :",
     value: "Karachi, Sindh - Pakistan",
     delay: 1.5,
     delayText: 1.6,
@@ -63,23 +68,23 @@ export default function Contact() {
           className="shadow-lg left-0 top-0 w-32 h-1 absolute bg-gradient-to-r from-red-500 via-red-600 to-orange-600"
         ></motion.span>
       </div>
-      <Headings headText="About me." headClass="mb-8" />
-      <div className="flex justify-between items-start">
-        <div className="p-[1px] rounded-full bg-gradient-to-r from-red-500 via-red-600 to-orange-600">
+      <Headings headText="Biography." headClass="" />
+      <div className="flex justify-between items-center my-12">
+        <div className="p-[1px] rounded-full bg-gradient-to-r from-red-500 via-red-600 to-orange-600 mr-6 shadow-lg">
           <Image
             src="/portfolio.jpg"
             alt="Portfolio Image"
-            width={250}
-            height={250}
+            width={500}
+            height={500}
             className="rounded-full"
           />
         </div>
-        <div className="">
+        <div>
           <motion.p
             initial={{ opacity: 0, x: 25 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="quotesSetting text-zinc-700 dark:text-white text-sm"
+            className="quotesSetting text-zinc-700 dark:text-zinc-300 text-sm font-medium mb-6"
           >
             Hi, I'm Zubair Ahmed – a passionate Web Developer, Graphic Designer,
             and Creative Professional with a strong foundation in both design
@@ -87,46 +92,47 @@ export default function Contact() {
             are not only visually stunning but also functional, responsive, and
             user-centric. Here's a bit more about me:
           </motion.p>
-
-          {personalInfo.map((item, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <motion.p
-                initial={{ opacity: 0, x: -15 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: item.delay, duration: 0.6 }}
-                className="text-red-500 font-semibold"
-              >
-                {item.label}
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, x: -15 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: item.delayText, duration: 0.6 }}
-                className="text-zinc-900 dark:text-white font-semibold"
-              >
-                {item.value}
-              </motion.p>
-            </div>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {personalInfo.map((item, index) => (
+              <div key={index} className="flex items-center gap-1">
+                <motion.p
+                  initial={{ opacity: 0, x: -15 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: item.delay, duration: 0.6 }}
+                  className="text-red-500 text-sm"
+                >
+                  {item.label}
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, x: -15 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: item.delayText, duration: 0.6 }}
+                  className="text-zinc-900 dark:text-zinc-300 text-sm font-medium"
+                >
+                  {item.value}
+                </motion.p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
       {aboutMeSummary.map((item, index) => (
-        <div key={index} className="mb-4">
+        <div key={index} className="mb-10">
           <motion.h1
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0, duration: 0.6 }}
-            className="text-zinc-900 font-bold text-lg"
+            className="text-zinc-900 dark:text-red-500 font-bold text-lg mb-[2px]"
           >
             {item.title}
           </motion.h1>
-
+          <hr className="w-12 border-red-500 border-[1px] dark:border-white mb-4" />
           <motion.p
             initial={{ opacity: 0, x: 25 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="quotesSetting text-zinc-700 dark:text-white text-sm"
+            className="quotesSetting text-zinc-700 dark:text-zinc-300 text-sm"
           >
             {item.content}
           </motion.p>
