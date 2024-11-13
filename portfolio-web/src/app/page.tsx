@@ -1,4 +1,5 @@
 "use client";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Headings from "@/components/Headings";
 import { motion } from "framer-motion";
@@ -14,13 +15,11 @@ import { FaArrowUpRightDots } from "react-icons/fa6";
 import { RiUserHeartLine } from "react-icons/ri";
 import { IoColorPaletteOutline } from "react-icons/io5";
 import { LuCalendarHeart } from "react-icons/lu";
+import CountUp from "react-countup";
+import { useState } from "react";
+import CardsHome from "@/components/cardsHome";
 
 const portfolioStats = [
-  {
-    number: 98,
-    icon: <FaArrowUpRightDots />,
-    heading: "Success Rate",
-  },
   {
     number: 120,
     icon: <AiOutlineFileDone />,
@@ -40,6 +39,11 @@ const portfolioStats = [
     number: 95,
     icon: <LuCalendarHeart />,
     heading: "Timely Delivery",
+  },
+  {
+    number: 98,
+    icon: <FaArrowUpRightDots />,
+    heading: "Success Rate",
   },
 ];
 
@@ -179,18 +183,7 @@ export default function Home() {
           <div className="w-1/4 h-16 bg-red-500 absolute translate-y-1/2 right-1 md:right-4 2xl:right-10 -z-10"></div>
         </motion.div>
       </div>
-      <div className="flex justify-between items-center my-12 bg-green-600">
-        {portfolioStats.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center justify-center"
-          >
-            <span className="text-red-500 text-5xl">{item.icon}</span>
-            <h4>{item.number}%</h4>
-            <p>{item.heading}</p>
-          </div>
-        ))}
-      </div>
+      <CardsHome />
     </div>
   );
 }
