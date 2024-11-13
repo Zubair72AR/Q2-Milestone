@@ -1,9 +1,8 @@
 "use client";
-import dynamic from "next/dynamic";
+
 import Image from "next/image";
 import Headings from "@/components/Headings";
 import { motion } from "framer-motion";
-import portfolioImage from "../../public/hero_02.png";
 import Button from "@/components/Button";
 import { TbExternalLink } from "react-icons/tb";
 import { BsBarChartLine } from "react-icons/bs";
@@ -15,8 +14,6 @@ import { FaArrowUpRightDots } from "react-icons/fa6";
 import { RiUserHeartLine } from "react-icons/ri";
 import { IoColorPaletteOutline } from "react-icons/io5";
 import { LuCalendarHeart } from "react-icons/lu";
-import CountUp from "react-countup";
-import { useState } from "react";
 import CardsHome from "@/components/cardsHome";
 
 const portfolioStats = [
