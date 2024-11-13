@@ -1,12 +1,6 @@
 "use client";
-import Button from "@/components/Button";
 import Headings from "@/components/Headings";
-import { FiSend } from "react-icons/fi";
-import { LuPhoneCall } from "react-icons/lu";
-import { MdOutlineEmail } from "react-icons/md";
-import { GrLocation } from "react-icons/gr";
 import { motion } from "framer-motion";
-import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 import Image from "next/image";
 const personalInfo = [
   { label: "Name :", value: "Zubair Ahmed", delay: 0.1, delayText: 0.2 },

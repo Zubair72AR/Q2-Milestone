@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Headings from "@/components/Headings";
 import { motion } from "framer-motion";

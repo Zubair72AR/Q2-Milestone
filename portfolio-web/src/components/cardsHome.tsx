@@ -2,10 +2,8 @@ import { motion } from "framer-motion";
 import { AiOutlineFileDone } from "react-icons/ai";
 import { TbUserStar } from "react-icons/tb";
 import { PiShootingStar } from "react-icons/pi";
-import { IoColorPaletteOutline } from "react-icons/io5";
 import { LuCalendarHeart } from "react-icons/lu";
 import { MdOutlineDesignServices } from "react-icons/md";
-import { FaChartLine } from "react-icons/fa";
 import CountUp from "react-countup";
 import { useState } from "react";
 import ScrollTrigger from "react-scroll-trigger";
@@ -50,9 +48,9 @@ export default function CardsHome() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0, duration: 0.5 }}
             key={index}
-            className="group relative flex flex-col items-center justify-center gap-1 w-44 pt-11 pb-6 rounded-xl border-b-4 border-b-red-700 group-hover:border-zinc-300 bg-gradient-to-br from-red-500 via-red-600 to-orange-600 shadow-lg hover:bg-gradient-to-br hover:from-white hover:to-zinc-100"
+            className="group relative flex flex-col items-center justify-center gap-1 w-44 pt-11 pb-6 rounded-xl border-b-4 border-b-red-700 group-hover:border-zinc-300 bg-gradient-to-br from-red-500 via-red-600 to-orange-600 hover:bg-gradient-to-br hover:from-white hover:to-zinc-100 shadow-md"
           >
-            <span className="text-red-500 group-hover:text-white shadow-md border-2 border-zinc-200 group-hover:border-red-400 text-3xl absolute bg-white group-hover:bg-red-500 p-[14px] rounded-full top-0 -translate-y-1/2">
+            <span className="text-red-500 group-hover:text-white shadow-md border-2 border-zinc-200 group-hover:border-red-400 text-3xl absolute bg-gradient-to-br from-white to-zinc-50 group-hover:bg-gradient-to-br group-hover:from-red-500 group-hover:via-red-600 group-hover:to-orange-600 p-[14px] rounded-full top-0 -translate-y-1/2">
               {item.icon}
             </span>
             <ScrollTrigger
@@ -78,7 +76,7 @@ export default function CardsHome() {
                 </CountUp>
               )}
             </ScrollTrigger>
-            <p className="text-white text-xs font-medium leading-none">
+            <p className="text-white group-hover:text-red-500 text-xs font-medium leading-none">
               {item.heading}
             </p>
           </motion.div>
