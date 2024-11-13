@@ -9,6 +9,39 @@ import { BsBarChartLine } from "react-icons/bs";
 import { MdOutlineRocketLaunch } from "react-icons/md";
 import { AiOutlinePieChart } from "react-icons/ai";
 import Link from "next/link";
+import { AiOutlineFileDone } from "react-icons/ai";
+import { FaArrowUpRightDots } from "react-icons/fa6";
+import { RiUserHeartLine } from "react-icons/ri";
+import { IoColorPaletteOutline } from "react-icons/io5";
+import { LuCalendarHeart } from "react-icons/lu";
+
+const portfolioStats = [
+  {
+    number: 98,
+    icon: <FaArrowUpRightDots />,
+    heading: "Success Rate",
+  },
+  {
+    number: 120,
+    icon: <AiOutlineFileDone />,
+    heading: "Projects Completed",
+  },
+  {
+    number: 80,
+    icon: <RiUserHeartLine />,
+    heading: "Satisfied Clients",
+  },
+  {
+    number: 150,
+    icon: <IoColorPaletteOutline />,
+    heading: "Designs Created",
+  },
+  {
+    number: 95,
+    icon: <LuCalendarHeart />,
+    heading: "Timely Delivery",
+  },
+];
 
 export default function Home() {
   return (
@@ -146,7 +179,18 @@ export default function Home() {
           <div className="w-1/4 h-16 bg-red-500 absolute translate-y-1/2 right-1 md:right-4 2xl:right-10 -z-10"></div>
         </motion.div>
       </div>
-      <div className="w-full bg-green-500 h-60 mt-20 mb-5"></div>
+      <div className="flex justify-between items-center my-12 bg-green-600">
+        {portfolioStats.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center"
+          >
+            <span className="text-red-500 text-5xl">{item.icon}</span>
+            <h4>{item.number}%</h4>
+            <p>{item.heading}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

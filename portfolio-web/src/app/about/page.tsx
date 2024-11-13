@@ -14,7 +14,7 @@ const personalInfo = [
   { label: "Job :", value: "Web Developer", delay: 0.5, delayText: 0.6 },
   { label: "Nationality :", value: "Pakistan", delay: 0.7, delayText: 0.8 },
   { label: "Birthday :", value: "25 December", delay: 0.9, delayText: 1.0 },
-  { label: "Phone :", value: "+92 0342 3873626", delay: 1.1, delayText: 1.2 },
+  { label: "Phone :", value: "+92 342 3873626", delay: 1.1, delayText: 1.2 },
   {
     label: "Email :",
     value: "hzubair717@gmail.com",
@@ -23,7 +23,7 @@ const personalInfo = [
   },
   {
     label: "Location :",
-    value: "Karachi, Sindh - Pakistan",
+    value: "Karachi, Pakistan",
     delay: 1.5,
     delayText: 1.6,
   },
@@ -69,7 +69,7 @@ export default function Contact() {
         ></motion.span>
       </div>
       <Headings headText="Biography." headClass="" />
-      <div className="flex justify-between items-center my-12">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6 mt-8 mb-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -82,14 +82,27 @@ export default function Contact() {
             scale: 0.95,
             transition: { duration: 0.1 },
           }}
-          className="p-[2px] rounded-full bg-gradient-to-r from-red-500 via-red-600 to-orange-600 mr-6 shadow-lg animate-in"
+          className="relative"
         >
+          <motion.div
+            initial={{ opacity: 0.0, scale: 0.7 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.5,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeIn",
+            }}
+            className="bottom-[10%] right-[18%] md:right-[16%] absolute rounded-full bg-gradient-to-r from-red-500 via-red-600 to-orange-600 shadow-lg"
+          >
+            <div className="m-[6px] w-5 h-5 md:w-4 md:h-4 rounded-full bg-white"></div>
+          </motion.div>
           <Image
-            src="/image.jpg"
+            src="/PortfolioImage.png"
             alt="Portfolio Image"
             width={500}
             height={500}
-            className="rounded-full"
+            className="min-w-[75%] md:min-w-[300px]"
           />
         </motion.div>
         <div>
@@ -99,13 +112,13 @@ export default function Contact() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="quotesSetting text-zinc-700 dark:text-zinc-300 text-sm font-medium mb-6"
           >
-            Hi, I'm Zubair Ahmed – a passionate Web Developer, Graphic Designer,
+            Hi, I'm Zubair Ahmed, A Passionate Web Developer, Graphic Designer,
             and Creative Professional with a strong foundation in both design
             and development. I specialize in crafting digital experiences that
             are not only visually stunning but also functional, responsive, and
             user-centric. Here's a bit more about me:
           </motion.p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-1">
             {personalInfo.map((item, index) => (
               <div key={index} className="flex items-center gap-1">
                 <motion.p
@@ -140,7 +153,13 @@ export default function Contact() {
           >
             {item.title}
           </motion.h1>
-          <hr className="w-12 border-red-500 border-[1px] dark:border-white mb-4" />
+          <motion.div
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          >
+            <hr className="w-12 border-red-500 border-[1px] dark:border-white mb-4" />
+          </motion.div>
           <motion.p
             initial={{ opacity: 0, x: 25 }}
             whileInView={{ opacity: 1, x: 0 }}
