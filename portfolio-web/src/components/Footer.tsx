@@ -50,7 +50,7 @@ export default function Footer() {
     <div className="relative mt-20">
       <motion.span
         initial={{ scaleY: 0, y: "-50%" }}
-        animate={{ scaleY: 1 }}
+        whileInView={{ scaleY: 1 }}
         transition={{
           duration: 3,
           repeat: Infinity,
@@ -63,7 +63,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-10 items-center mb-6">
           <motion.h1
             initial={{ opacity: 0, x: -15 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-4xl font-bold text-white"
           >
@@ -78,7 +78,7 @@ export default function Footer() {
             <motion.a
               key={href}
               initial={{ opacity: 0, scale: 0.8, rotate: 45 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ delay, duration: 0.6 }}
               whileHover={{
                 y: -8,
@@ -100,7 +100,7 @@ export default function Footer() {
         <div className="inline-block transition-all text-center hover:text-transparent bg-clip-text bg-gradient-to-br from-red-500 via-red-600 to-orange-600">
           <motion.p
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             className="font-bold text-2xl text-white"
           >
@@ -108,7 +108,7 @@ export default function Footer() {
           </motion.p>
           <motion.p
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             className="font-medium tracking-wide text-white"
           >
@@ -118,7 +118,7 @@ export default function Footer() {
         <div className="inline-block transition-all text-center hover:text-transparent bg-clip-text bg-gradient-to-br from-red-500 via-red-600 to-orange-600">
           <motion.p
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             className="font-bold text-2xl text-white"
           >
@@ -126,7 +126,7 @@ export default function Footer() {
           </motion.p>
           <motion.p
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             className="font-medium tracking-wide text-white"
           >
@@ -137,7 +137,7 @@ export default function Footer() {
       <div className="bg-zinc-950 px-6 lg:px-12 2xl:px-24 py-8 flex flex-wrap justify-center md:justify-between items-center gap-2 md:gap-6">
         <motion.p
           initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0, duration: 0.6 }}
           className="font-light text-sm flex justify-center items-center text-zinc-500"
         >
@@ -149,7 +149,7 @@ export default function Footer() {
           <motion.a
             href="/"
             initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0, duration: 0.6 }}
             className="font-light text-sm flex justify-center items-center text-white hover:text-red-500"
           >
@@ -158,7 +158,7 @@ export default function Footer() {
           <motion.a
             href="/"
             initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="font-light text-sm flex justify-center items-center text-white hover:text-red-500"
           >
@@ -167,7 +167,7 @@ export default function Footer() {
           <motion.a
             href="/"
             initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
             className="font-light text-sm flex justify-center items-center text-white hover:text-red-500"
           >

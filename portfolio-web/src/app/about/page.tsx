@@ -58,7 +58,7 @@ export default function Contact() {
       <div className="px-6 lg:px-12 2xl:px-24 py-4 relative overflow-hidden">
         <motion.span
           initial={{ scaleX: 0, x: "-50%" }}
-          animate={{ scaleX: 1 }}
+          whileInView={{ scaleX: 1 }}
           transition={{
             duration: 3,
             repeat: Infinity,
@@ -72,7 +72,7 @@ export default function Contact() {
       <div className="flex justify-between items-center my-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           whileHover={{
             scale: 1.1,
@@ -95,7 +95,7 @@ export default function Contact() {
         <div>
           <motion.p
             initial={{ opacity: 0, x: 25 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="quotesSetting text-zinc-700 dark:text-zinc-300 text-sm font-medium mb-6"
           >
@@ -110,7 +110,7 @@ export default function Contact() {
               <div key={index} className="flex items-center gap-1">
                 <motion.p
                   initial={{ opacity: 0, x: -15 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: item.delay, duration: 0.6 }}
                   className="text-red-500 text-sm"
                 >
@@ -118,7 +118,7 @@ export default function Contact() {
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: -15 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: item.delayText, duration: 0.6 }}
                   className="text-zinc-900 dark:text-zinc-300 text-sm font-medium"
                 >
@@ -134,7 +134,7 @@ export default function Contact() {
         <div key={index} className="mb-10">
           <motion.h1
             initial={{ opacity: 0, x: -15 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0, duration: 0.6 }}
             className="text-zinc-900 dark:text-red-500 font-bold text-lg mb-[2px]"
           >
@@ -143,7 +143,7 @@ export default function Contact() {
           <hr className="w-12 border-red-500 border-[1px] dark:border-white mb-4" />
           <motion.p
             initial={{ opacity: 0, x: 25 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="quotesSetting text-zinc-700 dark:text-zinc-300 text-sm"
           >

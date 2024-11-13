@@ -18,7 +18,7 @@ export default function Button({
   return (
     <motion.button
       initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
+      whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
       whileHover={{
         scale: 1.1,

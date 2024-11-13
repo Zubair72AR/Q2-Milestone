@@ -18,7 +18,7 @@ export default function Home() {
           <div className="relative p-1 overflow-hidden">
             <motion.span
               initial={{ scaleX: 0, x: "-50%" }}
-              animate={{ scaleX: 1 }}
+              whileInView={{ scaleX: 1 }}
               transition={{
                 duration: 3,
                 repeat: Infinity,
@@ -31,7 +31,7 @@ export default function Home() {
 
           <motion.p
             initial={{ opacity: 0, x: -15 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             className="col-span-1 text-zinc-800 dark:text-white font-bold text-2xl mt-12"
           >
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
         <motion.div
           initial={{ opacity: 0, scale: 0.8, rotate: 15 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.6 }}
           className="flex justify-center items-center ml-4"
         >
@@ -65,14 +65,14 @@ export default function Home() {
       <div className="flex flex-col md:flex-row justify-between items-start gap-8 -mt-24 md:mt-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0, duration: 0.5 }}
           className="px-10 py-16 shadow-lg border-2 border-red-400 bg-gradient-to-br from-red-500 via-red-600 to-orange-600"
         >
           <BsBarChartLine className="text-white h-12 w-12 mb-12" />
           <motion.p
             initial={{ opacity: 0, x: -15 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="font-bold text-2xl text-white mb-1"
           >
@@ -82,7 +82,7 @@ export default function Home() {
 
           <motion.p
             initial={{ opacity: 0, x: -15 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="quotesSetting text-sm text-white"
           >
@@ -92,14 +92,14 @@ export default function Home() {
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0, duration: 0.5 }}
           className="group px-10 py-16 shadow-lg border-2 border-zinc-100 hover:border-red-400 bg-gradient-to-br from-white to-zinc-50 hover:bg-gradient-to-br hover:from-red-500 hover:via-red-600 hover:to-orange-600 "
         >
           <MdOutlineRocketLaunch className="text-red-500 group-hover:text-white h-12 w-12 mb-12" />
           <motion.p
             initial={{ opacity: 0, x: -15 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="font-bold text-2xl text-zinc-900  group-hover:text-white mb-1"
           >
@@ -109,7 +109,7 @@ export default function Home() {
 
           <motion.p
             initial={{ opacity: 0, x: -15 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="quotesSetting text-sm text-zinc-900 group-hover:text-white "
           >
@@ -119,14 +119,14 @@ export default function Home() {
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0, duration: 0.5 }}
           className="group px-10 py-16 shadow-lg border-2 border-zinc-100 hover:border-red-400 bg-gradient-to-br from-white to-zinc-50 hover:bg-gradient-to-br hover:from-red-500 hover:via-red-600 hover:to-orange-600 "
         >
           <AiOutlinePieChart className="text-red-500 group-hover:text-white h-12 w-12 mb-12" />
           <motion.p
             initial={{ opacity: 0, x: -15 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="font-bold text-2xl text-zinc-900  group-hover:text-white mb-1"
           >
@@ -136,7 +136,7 @@ export default function Home() {
 
           <motion.p
             initial={{ opacity: 0, x: -15 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="quotesSetting text-sm text-zinc-900 group-hover:text-white"
           >

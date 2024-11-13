@@ -13,7 +13,7 @@ export default function Contact() {
       <div className="px-6 lg:px-12 2xl:px-24 py-4 relative overflow-hidden">
         <motion.span
           initial={{ scaleX: 0, x: "-50%" }}
-          animate={{ scaleX: 1 }}
+          whileInView={{ scaleX: 1 }}
           transition={{
             duration: 3,
             repeat: Infinity,
@@ -29,7 +29,7 @@ export default function Contact() {
           <div className="grid grid-col-2 w-fit h-fit">
             <motion.span
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               whileHover={{
                 scale: 1.1,
@@ -40,7 +40,7 @@ export default function Contact() {
             </motion.span>
             <motion.p
               initial={{ opacity: 0, x: -15 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="col-span-1 text-zinc-800 dark:text-white font-bold text-lg"
             >
@@ -48,7 +48,7 @@ export default function Contact() {
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: -15 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="col-start-2 text-zinc-600 dark:text-zinc-400 text-sm"
             >
@@ -58,7 +58,7 @@ export default function Contact() {
           <div className="grid grid-col-2 w-fit h-fit">
             <motion.span
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               whileHover={{
                 scale: 1.1,
@@ -69,7 +69,7 @@ export default function Contact() {
             </motion.span>
             <motion.p
               initial={{ opacity: 0, x: -15 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="col-span-1 text-zinc-800 dark:text-white font-bold text-lg"
             >
@@ -77,7 +77,7 @@ export default function Contact() {
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: -15 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="col-start-2 text-zinc-600 dark:text-zinc-400 text-sm"
             >
@@ -87,7 +87,7 @@ export default function Contact() {
           <div className="grid grid-col-2 w-fit h-fit">
             <motion.span
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               whileHover={{
                 scale: 1.1,
@@ -98,7 +98,7 @@ export default function Contact() {
             </motion.span>
             <motion.p
               initial={{ opacity: 0, x: -15 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="col-span-1 text-zinc-800 dark:text-white font-bold text-lg"
             >
@@ -106,7 +106,7 @@ export default function Contact() {
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: -15 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="col-start-2 text-zinc-600 dark:text-zinc-400 text-sm"
             >
@@ -122,7 +122,7 @@ export default function Contact() {
             required
             className="w-full outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 dark:focus:border-red-500 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
             initial={{ opacity: 0, x: -25 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
           />
           <motion.input
@@ -131,7 +131,7 @@ export default function Contact() {
             required
             className="w-full outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 dark:focus:border-red-500 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
             initial={{ opacity: 0, x: -25 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
           />
           <motion.input
@@ -140,7 +140,7 @@ export default function Contact() {
             required
             className="w-full outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 dark:focus:border-red-500 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
             initial={{ opacity: 0, x: -25 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
           />
           <motion.textarea
@@ -148,7 +148,7 @@ export default function Contact() {
             required
             className="w-full outline-none border-[1px] border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2 my-2 focus:border-red-400 dark:focus:border-red-500 text-zinc-600 dark:text-zinc-300 text-sm rounded-md"
             initial={{ opacity: 0, x: -25 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
           ></motion.textarea>
 
