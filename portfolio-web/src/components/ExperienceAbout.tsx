@@ -43,7 +43,7 @@ const ExperienceData = [
 
 export default function ExperienceAbout() {
   return (
-    <div>
+    <div className="mt-12">
       <div className="px-6 lg:px-12 2xl:px-24 py-4 relative overflow-hidden">
         <motion.span
           initial={{ scaleX: 0, x: "-50%" }}
@@ -65,8 +65,9 @@ export default function ExperienceAbout() {
             initial={{ opacity: 0, scale: 0.7 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: item.delay, duration: 0.5 }}
-            className="group px-10 py-10 shadow-lg border-2 border-zinc-100 hover:border-red-400 bg-gradient-to-br from-white to-zinc-50 hover:bg-gradient-to-br hover:from-red-500 hover:via-red-600 hover:to-orange-600 flex flex-col gap-4"
+            className="relative group px-10 py-10 shadow-lg border-2 border-zinc-100 hover:border-red-400 bg-gradient-to-br from-white to-zinc-50 hover:bg-gradient-to-br hover:from-red-500 hover:via-red-600 hover:to-orange-600 flex flex-col gap-4"
           >
+            <div className="absolute w-1 h-16 bg-gradient-to-r from-red-500 via-red-600 to-orange-600 group-hover:bg-gradient-to-br group-hover:from-white group-hover:to-zinc-100 -left-1 top-1/2 -translate-y-1/2"></div>
             <motion.p
               initial={{ opacity: 0, x: -15 }}
               whileInView={{ opacity: 1, x: 0 }}

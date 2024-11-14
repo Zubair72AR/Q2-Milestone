@@ -118,7 +118,7 @@ export default function Contact() {
             {personalInfo.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center gap-1 bg-white border-2 border-zinc-100 p-2"
+                className="flex items-center gap-1 bg-white dark:bg-zinc-900 border-2 border-zinc-100 dark:border-zinc-800 p-2"
               >
                 <motion.p
                   initial={{ opacity: 0, x: -15 }}
