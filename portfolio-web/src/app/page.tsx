@@ -14,6 +14,7 @@ import { RiUserHeartLine } from "react-icons/ri";
 import { IoColorPaletteOutline } from "react-icons/io5";
 import { LuCalendarHeart } from "react-icons/lu";
 import CardsHome from "@/components/cardsHome";
+import ServicesHome from "@/components/ServicesHome";
 
 const portfolioStats = [
   {
@@ -81,8 +82,8 @@ export default function Home() {
           </Link>
         </div>
         <motion.div
-          initial={{ opacity: 0, scale: 0.8, rotate: 15 }}
-          whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           className="flex justify-center items-center ml-4"
         >
@@ -91,7 +92,7 @@ export default function Home() {
             alt="Portfolio Image"
             width={500}
             height={300}
-            className="w-[90%] sm:w-[480px] md:w-[400px] relative bottom-4 md:-bottom-10 -z-20"
+            className="w-[90%] sm:w-[480px] md:w-[400px] bottom-4 md:-bottom-10"
           />
         </motion.div>
       </div>
@@ -180,6 +181,7 @@ export default function Home() {
         </motion.div>
       </div>
       <CardsHome />
+      <ServicesHome />
     </div>
   );
 }

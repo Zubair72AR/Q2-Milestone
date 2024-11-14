@@ -46,7 +46,7 @@ export default function CardsHome() {
           initial={{ opacity: 0, scale: 0.7 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="group relative flex flex-col items-center justify-center gap-1 w-44 pt-11 pb-6 rounded-xl border-b-4 border-b-red-700 group-hover:border-zinc-300 bg-gradient-to-br from-red-500 via-red-600 to-orange-600 hover:bg-gradient-to-br hover:from-white hover:to-zinc-100 shadow-md"
+          className="group relative flex flex-col items-center justify-center gap-1 w-44 pt-11 pb-6 border-2 border-red-400 hover:border-zinc-100 bg-gradient-to-br from-red-500 via-red-600 to-orange-600 hover:bg-gradient-to-br hover:from-white hover:to-zinc-100 shadow-lg"
           onViewportEnter={() => setHasEntered(true)}
           onViewportLeave={() => setHasEntered(false)}
         >
@@ -54,14 +54,8 @@ export default function CardsHome() {
             {item.icon}
           </span>
 
-          {/* Use key to force reset and rerender CountUp */}
           {hasEntered && (
-            <CountUp
-              key={item.number} // Changing the key ensures that CountUp restarts each time it's in view
-              start={1}
-              end={item.number}
-              duration={5}
-            >
+            <CountUp key={item.number} start={1} end={item.number} duration={5}>
               {({ countUpRef }) => (
                 <h4 className="text-white group-hover:text-zinc-900 text-4xl font-bold flex justify-center items-center gap-1">
                   <span ref={countUpRef} />
