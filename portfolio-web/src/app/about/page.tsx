@@ -1,4 +1,6 @@
 "use client";
+import EducationAbout from "@/components/EducationAbout";
+import ExperienceAbout from "@/components/ExperienceAbout";
 import Headings from "@/components/Headings";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -114,7 +116,10 @@ export default function Contact() {
           </motion.p>
           <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-1">
             {personalInfo.map((item, index) => (
-              <div key={index} className="flex items-center gap-1">
+              <div
+                key={index}
+                className="flex items-center gap-1 bg-white border-2 border-zinc-100 p-2"
+              >
                 <motion.p
                   initial={{ opacity: 0, x: -15 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -164,6 +169,8 @@ export default function Contact() {
           </motion.p>
         </div>
       ))}
+      <EducationAbout />
+      <ExperienceAbout />
     </div>
   );
 }

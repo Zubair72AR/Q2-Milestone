@@ -9,22 +9,22 @@ import { useState } from "react";
 
 const portfolioStats = [
   {
-    number: 120,
+    number: 122,
     icon: <AiOutlineFileDone />,
     heading: "Projects Completed",
   },
   {
-    number: 80,
+    number: 81,
     icon: <TbUserStar />,
     heading: "Satisfied Clients",
   },
   {
-    number: 150,
+    number: 149,
     icon: <MdOutlineDesignServices />,
     heading: "Designs Created",
   },
   {
-    number: 95,
+    number: 94,
     icon: <LuCalendarHeart />,
     heading: "Timely Delivery",
   },
@@ -39,7 +39,7 @@ export default function CardsHome() {
   const [hasEntered, setHasEntered] = useState(false);
 
   return (
-    <div className="flex justify-center items-center gap-6 my-24">
+    <div className="flex flex-wrap justify-center items-center gap-12 mg:gap-6 my-24 mx-auto">
       {portfolioStats.map((item, index) => (
         <motion.div
           key={index}

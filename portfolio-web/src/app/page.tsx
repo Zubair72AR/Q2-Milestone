@@ -82,8 +82,8 @@ export default function Home() {
           </Link>
         </div>
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.8, rotate: 15 }}
+          whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.6 }}
           className="flex justify-center items-center ml-4"
         >
@@ -92,11 +92,11 @@ export default function Home() {
             alt="Portfolio Image"
             width={500}
             height={300}
-            className="w-[90%] sm:w-[480px] md:w-[400px] bottom-4 md:-bottom-10"
+            className="w-[90%] sm:w-[480px] md:w-[400px] relative bottom-4 md:-bottom-10 -z-20"
           />
         </motion.div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-start gap-8 -mt-24 md:mt-4">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-8 -mt-24 md:mt-4 2xl:mt-16">
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
           whileInView={{ opacity: 1, scale: 1 }}
