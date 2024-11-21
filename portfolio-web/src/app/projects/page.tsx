@@ -113,7 +113,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.7 }}
-              className="absolute bottom-7 left-6 font-bold text-zinc-500"
+              className="absolute bottom-7 left-6 font-bold text-zinc-400"
             >
               {e.title}
             </motion.p>
@@ -121,7 +121,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.7 }}
-              className="absolute bottom-3 left-6 text-zinc-500 text-sm"
+              className="absolute bottom-3 left-6 text-zinc-400 text-sm"
             >
               {e.category}
             </motion.p>
