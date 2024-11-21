@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Headings from "@/components/Headings";
 import { useState } from "react";
+import Image from "next/image";
 
 let Project = [
   { name: "All Projects", delay: 0.1 },
@@ -12,11 +13,30 @@ let Project = [
 ];
 
 const projectData = [
-  { title: "Branding Project", category: "Branding", src: "" },
-  { title: "Creative Project", category: "Creative", src: "" },
-  { title: "Design Project", category: "Design", src: "" },
-  { title: "Art Project", category: "Art", src: "" },
-  { title: "Another Art Project", category: "Art", src: "" },
+  {
+    title: "Branding Project",
+    category: "Branding",
+    src: "/Slack.gif",
+  },
+  {
+    title: "Branding Project",
+    category: "Branding",
+    src: "/Moku.gif",
+  },
+  {
+    title: "Branding Project",
+    category: "Branding",
+    src: "/LiveInsight.gif",
+  },
+  { title: "Creative Project", category: "Creative", src: "/Samsung.gif" },
+  { title: "Creative Project", category: "Creative", src: "/Incode.gif" },
+  { title: "Design Project", category: "Design", src: "/Gilbert.gif" },
+  { title: "Design Project", category: "Design", src: "/Captain.gif" },
+  { title: "Design Project", category: "Design", src: "/HashDash.gif" },
+  { title: "Design Project", category: "Design", src: "/Forms.gif" },
+  { title: "Art Project", category: "Art", src: "/Yedoo.gif" },
+  { title: "Art Project", category: "Art", src: "/Multicolor.gif" },
+  { title: "Art Project", category: "Art", src: "/Thankyou.gif" },
 ];
 export default function Projects() {
   const [active, setActive] = useState("All Projects");
@@ -65,7 +85,7 @@ export default function Projects() {
           </motion.p>
         ))}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
         {filterProjects.map((e, i) => (
           <motion.div
             key={i}
@@ -80,10 +100,31 @@ export default function Projects() {
               scale: 0.95,
               transition: { duration: 0.1 },
             }}
-            className="bg-red-500"
+            className="relative overflow-hidden shadow-md rounded-2xl"
           >
-            <h4>{e.title}</h4>
-            <p>{e.category}</p>
+            <Image
+              src={e.src}
+              alt="Project Image"
+              width={30}
+              height={20}
+              className="w-full"
+            />
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.7 }}
+              className="absolute bottom-7 left-6 font-bold text-zinc-500"
+            >
+              {e.title}
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.7 }}
+              className="absolute bottom-3 left-6 text-zinc-500 text-sm"
+            >
+              {e.category}
+            </motion.p>
           </motion.div>
         ))}
       </div>
